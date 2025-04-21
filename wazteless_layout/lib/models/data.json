@@ -1,0 +1,152 @@
+[
+  {
+    "brand_name": "Unilever",
+    "products": ["Dove", "Ben & Jerry's", "Hellmann's", "Lipton", "Surf"],
+    "esg_score": 72,
+    "esg_grade": "A",
+    "brand_info": "Unilever is a British-Dutch multinational company offering consumer goods including foods, beverages, cleaning agents, and personal care products.",
+    "recent_esg_news": [
+      {
+        "title": "Unilever commits to net zero emissions by 2039",
+        "date": "2021-06-15",
+        "source": "Reuters",
+        "summary": "Unilever announced its goal to achieve net zero emissions across its supply chain by 2039. The company also plans to invest €1 billion in a climate and nature fund to support initiatives that reduce emissions and improve biodiversity."
+      }
+    ]
+  },
+  {
+    "brand_name": "Nestlé",
+    "products": ["KitKat", "Nescafé", "Purina", "Gerber", "Maggi"],
+    "esg_score": 68,
+    "esg_grade": "BBB",
+    "brand_info": "Nestlé is a Swiss multinational food and drink processing conglomerate, recognized as the largest food company in the world.",
+    "recent_esg_news": [
+      {
+        "title": "Nestlé to cut plastic waste with investment in sustainable packaging",
+        "date": "2020-01-16",
+        "source": "Nestlé Newsroom",
+        "summary": "Nestlé pledged to invest up to CHF 2 billion to shift from virgin plastics to food-grade recycled plastics and accelerate development of sustainable packaging solutions to reduce plastic waste."
+      }
+    ]
+  },
+  {
+    "brand_name": "PepsiCo",
+    "products": ["Pepsi", "Lay's", "Quaker", "Gatorade", "Doritos"],
+    "esg_score": 70,
+    "esg_grade": "A",
+    "brand_info": "PepsiCo is an American multinational food, snack, and beverage corporation.",
+    "recent_esg_news": [
+      {
+        "title": "PepsiCo sets 2040 net-zero emissions goal and expands regenerative farming",
+        "date": "2021-01-14",
+        "source": "PepsiCo",
+        "summary": "PepsiCo committed to achieving net-zero emissions by 2040, focusing on regenerative agricultural practices across 7 million acres, equivalent to the company's entire agricultural footprint."
+      }
+    ]
+  },
+  {
+    "brand_name": "Procter & Gamble",
+    "products": ["Tide", "Pampers", "Gillette", "Oral-B", "Head & Shoulders"],
+    "esg_score": 65,
+    "esg_grade": "BBB",
+    "brand_info": "Procter & Gamble is an American multinational consumer goods corporation.",
+    "recent_esg_news": [
+      {
+        "title": "P&G aims for carbon neutrality by 2030",
+        "date": "2020-09-14",
+        "source": "P&G Newsroom",
+        "summary": "P&G aims to reduce greenhouse gas emissions by 50% and purchase 100% renewable electricity globally for its operations by 2030, as part of a broader strategy to become carbon neutral."
+      }
+    ]
+  },
+  {
+    "brand_name": "The J. M. Smucker Company",
+    "products": ["Smucker's", "Jif", "Dunkin’", "Folgers", "Milk-Bone"],
+    "esg_score": 27,
+    "esg_grade": "BBB",
+    "brand_info": "The J. M. Smucker Company manufactures and markets branded food and beverage products.",
+    "recent_esg_news": [
+      {
+        "title": "Smucker's highlights sustainable sourcing in responsibility report",
+        "date": "2021-08-10",
+        "source": "Sustainable Brands",
+        "summary": "Smucker’s sustainability report outlined efforts in responsibly sourcing coffee, reducing water usage, and enhancing packaging recyclability as part of its commitment to ethical and environmental standards."
+      }
+    ]
+  },
+  {
+    "brand_name": "Walgreens Boots Alliance",
+    "products": ["Walgreens", "Boots", "No7", "Liz Earle", "Soap & Glory"],
+    "esg_score": 30,
+    "esg_grade": "BBB",
+    "brand_info": "Walgreens Boots Alliance is a global pharmacy-led health and wellbeing enterprise.",
+    "recent_esg_news": [
+      {
+        "title": "Walgreens launches green building initiative",
+        "date": "2020-11-02",
+        "source": "Environmental Leader",
+        "summary": "Walgreens began retrofitting over 1,000 stores with energy-efficient systems, aiming to cut greenhouse gas emissions and reduce energy consumption as part of its broader sustainability goals."
+      }
+    ]
+  },
+  {
+    "brand_name": "Hormel Foods Corporation",
+    "products": ["Spam", "Applegate", "Skippy", "Hormel", "Justin’s"],
+    "esg_score": 28,
+    "esg_grade": "BBB",
+    "brand_info": "Hormel Foods Corporation produces and markets various meat and food products.",
+    "recent_esg_news": [
+      {
+        "title": "Hormel recognized for supply chain sustainability by CDP",
+        "date": "2022-03-01",
+        "source": "CDP",
+        "summary": "Hormel was named to the CDP Supplier Engagement Leaderboard for its efforts in managing environmental impacts within its supply chain and improving water conservation across facilities."
+      }
+    ]
+  },
+  {
+    "brand_name": "The Estée Lauder Companies Inc.",
+    "products": ["Estée Lauder", "Clinique", "MAC", "La Mer", "Jo Malone"],
+    "esg_score": 32,
+    "esg_grade": "A",
+    "brand_info": "The Estée Lauder Companies is a manufacturer and marketer of skincare, makeup, and fragrance products.",
+    "recent_esg_news": [
+      {
+        "title": "Estée Lauder achieves 100% renewable electricity",
+        "date": "2020-11-30",
+        "source": "Estée Lauder",
+        "summary": "Estée Lauder announced it now uses 100% renewable electricity for its direct operations globally and is advancing efforts toward net-zero carbon emissions by investing in energy efficiency and green technologies."
+      }
+    ]
+  },
+  {
+    "brand_name": "Sysco Corporation",
+    "products": ["Sysco Classic", "Wholesome Farms", "Bakers Source", "Sysco Simply"],
+    "esg_score": 29,
+    "esg_grade": "BBB",
+    "brand_info": "Sysco Corporation is a multinational distributor of food and related products to restaurants and institutions.",
+    "recent_esg_news": [
+      {
+        "title": "Sysco to power all operations with renewable electricity by 2030",
+        "date": "2021-09-14",
+        "source": "Sysco Newsroom",
+        "summary": "Sysco committed to sourcing 100% renewable electricity for its global operations and has also introduced low-emission fleet vehicles as part of its climate action plan."
+      }
+    ]
+  },
+  {
+    "brand_name": "Kellogg's",
+    "products": ["Corn Flakes", "Frosted Flakes", "Pringles", "Eggo", "Cheez-It"],
+    "esg_score": 67,
+    "esg_grade": "BBB",
+    "brand_info": "Kellogg's is an American multinational food manufacturing company.",
+    "recent_esg_news": [
+      {
+        "title": "Kellogg’s sets sustainability targets for emissions and packaging",
+        "date": "2021-04-05",
+        "source": "Kellogg Company",
+        "summary": "Kellogg’s set new environmental goals, including cutting greenhouse gas emissions by 65% and shifting to 100% reusable, recyclable, or compostable packaging by 2025."
+      }
+    ]
+  }
+]

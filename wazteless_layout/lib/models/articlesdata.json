@@ -1,0 +1,62 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Reducing Food Waste at Home",
+        "body": "Plan your meals, use leftovers creatively, and store food properly to extend shelf life and reduce waste."
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Ethically Sourced Coffee Explained",
+        "body": "Ethically sourced coffee ensures farmers are paid fair wages and environmental standards are upheld during production."
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "Restaurants Fighting Food Waste",
+        "body": "Many restaurants now offer discounts on meals prepared earlier in the day to reduce waste and save you money."
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "Understanding Fair Trade Labels",
+        "body": "Fair Trade labels guarantee that products were produced ethically, with fair wages and safe working conditions."
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "Tips to Store Food Smarter",
+        "body": "Keep fruits and vegetables in the right humidity, freeze leftovers, and label stored food with dates to waste less."
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "Apps Helping Reduce Food Waste",
+        "body": "Apps like Too Good To Go and OLIO connect people with unsold food from restaurants and neighbors to prevent waste."
+    },
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "Sustainable Seafood Choices",
+        "body": "Choose seafood certified by MSC or ASC to ensure it’s caught or farmed with minimal environmental impact."
+    },
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "Composting 101: Reduce Organic Waste",
+        "body": "Turn your kitchen scraps into nutrient-rich compost to reduce landfill waste and enrich your garden soil."
+    },
+    {
+        "userId": 1,
+        "id": 9,
+        "title": "The True Cost of Cheap Food",
+        "body": "Low prices can mean environmental harm and labor exploitation—choose local and ethical products when possible."
+    },
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "How to Shop More Sustainably",
+        "body": "Bring reusable bags, buy seasonal produce, and choose items with less packaging to lower your food footprint."
+    }
+]
