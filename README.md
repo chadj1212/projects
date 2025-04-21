@@ -2,7 +2,7 @@
 my current work and school projects ( theres are projects ive made over the school years)
 Maps : is a flutter project i worked on which uses geolocation
 
-generationz : is a flutter app that i made with a class mate
+generationz/wazteless : is a flutter app that i made with a class mate
 
 poke-project : is a small poke mon website i made that uses uses the pokemon api to display any pokemon you type
 pokemon: is a list of all pokemon displayed which uses the pokemon api aswell
