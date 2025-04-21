@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Stats Viewer</title>
+    <style>
+        /* Basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1rem;
+        }
+
+        .stat-bar-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .stat-bar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .stat-label {
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .bar {
+            position: relative;
+            flex-grow: 1;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            text-align: right;
+            padding-right: 5px;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Stats Viewer</h1>
+        <input type="text" id="pokemon-name" placeholder="Enter Pokémon name (e.g., pikachu)">
+        <button id="fetch-stats">Get Stats</button>
+        <div class="stat-bar-container" id="stats-container"></div>
+    </div>
+
+    <script>
+        document.getElementById('fetch-stats').addEventListener('click', async () => {
+            const pokemonName = document.getElementById('pokemon-name').value.toLowerCase().trim();
+            const statsContainer = document.getElementById('stats-container');
+            
+            // Clear previous data
+            statsContainer.innerHTML = '';
+
+            if (pokemonName) {
+                try {
+                    // Fetch Pokémon details (stats)
+                    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+                    if (!response.ok) throw new Error('Pokémon not found');
+                    const data = await response.json();
+
+                    // Display each stat as a bar
+                    data.stats.forEach(stat => {
+                        const statName = stat.stat.name.toUpperCase();
+                        const statValue = stat.base_stat;
+                        const maxStat = 150; // Assumed max value for scaling the bar (adjustable)
+                        const barWidth = Math.min(statValue / maxStat, 1) * 100; // Width as a percentage
+
+                        // Create the stat bar container
+                        const statBar = document.createElement('div');
+                        statBar.classList.add('stat-bar');
+
+                        // Create the label for the stat
+                        const statLabel = document.createElement('div');
+                        statLabel.classList.add('stat-label');
+                        statLabel.innerText = statName;
+
+                        // Create the bar element
+                        const bar = document.createElement('div');
+                        bar.classList.add('bar');
+
+                        // Create the fill for the bar
+                        const barFill = document.createElement('div');
+                        barFill.classList.add('bar-fill');
+                        barFill.style.width = `${barWidth}%`;
+                        barFill.style.backgroundColor = getStatColor(statName);
+                        barFill.innerText = statValue; // Display the stat value in the bar
+
+                        // Assemble the elements
+                        bar.appendChild(barFill);
+                        statBar.appendChild(statLabel);
+                        statBar.appendChild(bar);
+                        statsContainer.appendChild(statBar);
+                    });
+                } catch (error) {
+                    statsContainer.innerHTML = `<p style="color:red;">${error.message}</p>`;
+                }
+            }
+        });
+
+        // Function to determine color based on stat type
+        function getStatColor(statName) {
+            switch (statName) {
+                case 'HP': return '#FF5959';
+                case 'ATTACK': return '#F5AC78';
+                case 'DEFENSE': return '#FAE078';
+                case 'SPECIAL-ATTACK': return '#9DB7F5';
+                case 'SPECIAL-DEFENSE': return '#A7DB8D';
+                case 'SPEED': return '#FA92B2';
+                default: return '#A8A77A';
+            }
+        }
+    </script>
+</body>
+</html>

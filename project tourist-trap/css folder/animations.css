@@ -1,0 +1,206 @@
+/*this css file will be used for animations*/
+/**/
+
+
+
+/*text animations for the landing page*/
+
+
+
+.wave-text span {
+    display: inline-block;
+    font-size: 4rem;
+    animation: wave 2s ease-in-out infinite;
+    color: rgba(255, 255, 255, 0.853);
+    
+  }
+  
+  .wave-text span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .wave-text span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .wave-text span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .wave-text span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .wave-text span:nth-child(6) {
+    animation-delay: 1.0s;
+  }
+  .wave-text span:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  .wave-text span:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  .wave-text span:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+  .wave-text span:nth-child(10) {
+    animation-delay: 1.8s;
+  }
+  .wave-text span:nth-child(11) {
+    animation-delay: 2.0s;
+  }
+  .wave-text span:nth-child(12) {
+    animation-delay: 2.2s;
+  }
+  .wave-text span:nth-child(13) {
+    animation-delay: 2.4s;
+  }
+  .wave-text span:nth-child(14) {
+    animation-delay: 2.6s;
+  }
+  .wave-text span:nth-child(15) {
+    animation-delay: 2.8s;
+  }
+  .wave-text span:nth-child(16) {
+    animation-delay: 3.0s;
+  }
+  .wave-text span:nth-child(17) {
+    animation-delay: 3.2s;
+  }
+  .wave-text span:nth-child(18) {
+    animation-delay: 3.4s;
+  }
+  .wave-text span:nth-child(19) {
+    animation-delay: 3.6s;
+  }
+  .wave-text span:nth-child(20) {
+    animation-delay: 3.8s;
+  }
+  .wave-text span:nth-child(21) {
+    animation-delay: 4.0s;
+  }
+  .wave-text span:nth-child(22) {
+    animation-delay: 4.2s;
+  }
+  
+  
+  @keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+  }
+
+  @media only screen and (max-width:800px) {
+    .wave-text span{
+      font-size: 2rem;
+
+      animation: wave 2.5s ease-in-out infinite;
+    }
+  } 
+
+
+  /*controls the animation for container and cards*/
+
+  .text-box, .image-box {
+    opacity: 0;
+    transform: translateY(-50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+  }
+  
+  .image-box {
+    transform: translateY(50px); /* Slide in from the right */
+  }
+  .image-box-b {
+    transform: translateY(50px); /* Slide in from the right */
+  }
+  .content-box-b{
+    opacity: 0;
+    transform: translateY(-50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+  }
+  .slide{
+    opacity: 0;
+    transform: translateX(-50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+
+  }
+
+  .slide2{
+    opacity: 0;
+    transform: translateX(50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+
+  }
+  .text-box-down {
+    opacity: 0;
+    transform: translateY(50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+  }
+.slide3{
+    opacity: 0;
+    transform: translateY(50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+
+  }
+  
+
+
+  .card-a {
+    opacity: 0;
+    transform: translateY(-50px); /* Default: Slide in from the left */
+    transition: opacity 1.9s ease-out, transform 1.9s ease-out;
+  }
+  .visible {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+  }
+  
+/*animation for events text */
+  h2 {
+    margin: 0; padding: 0;
+    position:absolute;
+    top: 50%; left: 50%;
+    transform:translate(-50%,-50%);
+    font-size: 6em; color:transparent;
+    text-transform:uppercase;
+    }
+    h2 span:nth-child(1){
+    position:absolute;
+    top:0; left:0; color: #000;
+    transition:0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow:hidden;
+    }
+    h2:hover span:nth-child(1){
+    transform:translateY(-18px); 
+    }
+    h2 span:nth-child(2){
+    position:absolute;
+    top:0; left:0; color: #000;
+    transition:0.5s;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow:hidden;
+    }
+    h2:hover span:nth-child(2){
+    transform:translateY(18px); 
+    }
+    h2 span:nth-child(3){
+    position:absolute;
+    top:50%; left: 0;
+    transform:translateY(-50%) scaleY(0);
+    width: 91%; color: #000;
+    background:#ff0;
+    font-size: 0.25em; font-weight: 500;
+    letter-spacing:0.7em;
+    text-align:center;
+    padding-left: 20px; margin-left: 5px;
+    transition:0.5s;
+    }
+    h2:hover span:nth-child(3){
+    transform:translateY(-50%) scaleY(1);
+    }
+
+  

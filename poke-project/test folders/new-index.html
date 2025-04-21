@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon HP Stat Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .stats {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon HP Stat Viewer</h1>
+        <input type="text" id="pokemonName" placeholder="Enter Pokémon name (e.g., pikachu)">
+        <button onclick="fetchPokemon()">Get HP Stat</button>
+        
+        <div id="pokemonInfo" class="stats"></div>
+    </div>
+
+    <script>
+        async function fetchPokemon() {
+            const name = document.getElementById('pokemonName').value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
+            const pokemonInfoDiv = document.getElementById('pokemonInfo');
+            
+            // Clear previous data
+            pokemonInfoDiv.innerHTML = "";
+
+            try {
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error('Pokémon not found');
+                }
+
+                const data = await response.json();
+
+                // Get only the HP stat
+                const hpStat = data.stats.find(stat => stat.stat.name === "hp");
+
+                // Display Pokémon Name and HP
+                pokemonInfoDiv.innerHTML += `<h2>${data.name.toUpperCase()}</h2>`;
+                pokemonInfoDiv.innerHTML += `<div><strong>HP:</strong> ${hpStat.base_stat}</div>`;
+
+            } catch (error) {
+                pokemonInfoDiv.innerHTML = "<p>Pokémon not found. Please try again.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+
+body {
+    background-image: url("pokeback.jpg"); 
+    background-size: cover;
+    background-position: center;  
+    
+  }
+  
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: #f3f3f3;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #ddd;
+    }
+    
+    li a.active {
+      color: white;
+      background-color: #04AA6D;
+    }
+  
+  
+  
+  .navbar{
+      margin: 10px;
+  }
+  
+  
+  
+  .search{
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+  }
+  
+  #poke{
+  
+      translate: -200px 20px;
+  }
+  
+  .title{
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  translate: -190px 1px;
+  }
+  
+  .card-0{
+      display: flex;
+      justify-content: center;
+      background-color: rgba(60, 58, 112, 0.545);
+      width: 1100px;
+      height: 700px;    
+      border: 12px solid rgba(255, 205, 5, 0.637);  
+      border-radius: 20px 20px 20px 20px ;
+  
+      margin: auto;
+  
+      
+  }
+  
+  
+  .sprite{
+      display: flex;
+      justify-content: center;
+      width: 25px;
+      height: 250px;
+      translate: 0px 35px;
+      position: absolute;
+  }
+  
+  
+  
+  
+   /* temporal stuff*/
+   .grid-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-gap: 100px;
+    justify-items: stretch;
+    align-items: stretch;
+    padding-bottom: 3rem;
+    translate: -130px 0;
+    
+  }
+   .grid-item-1{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    height: 30px;
+    width: 170px;
+    translate: 25px 120px;
+    margin: 10px;
+    border: 10px solid rgba(255, 228, 196, 0);
+    background-color: #ffb5d900; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 2px #4c032400;
+  
+   }
+   .grid-item-2{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    height: 350px;
+    width: 500px;
+    translate: -50px 189px;
+    margin: 10px;
+    border: 10px solid rgba(255, 228, 196, 0);
+    background-color: rgba(61, 124, 202, 0.767); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 2px #4c0324;
+  
+   }
+  
+  
+  
+   .grid-item02{
+    
+    gap: 20px;
+    height: 350px;
+    width: 500px;
+    translate: -50px 189px;
+    margin: 10px;
+    border: 10px solid rgba(255, 228, 196, 0);
+    background-color: rgba(61, 124, 202, 0.767); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 2px #4c0324;
+  
+   }
+   .grid-item-3{
+    background-color: transparent;
+    
+    translate: 0px -0px;
+    background-color: #4c032400;
+  }
+  .sub-grid2{
+    display: flex;
+    justify-content:start;
+    text-align:left;
+    font-size: 30px;
+    height: 150px;
+    translate: 0px -0px;
+    background-color: #4c032489;
+  }
+  h4{
+    translate: 12px 0px;
+    font-size: 25px;
+    translate: 0px;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+    
+  
+  
+  
+  
+  
+  
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
+  
+  
+  
+  
+  
+  
