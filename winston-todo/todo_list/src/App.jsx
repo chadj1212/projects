@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { TodoProvider } from "./context/TodoContext";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/SideBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";

@@ -1,14 +1,13 @@
 import React, { createContext, useContext, useReducer } from "react";
 
-// Actions
 const ADD_TODO = "ADD_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const DELETE_TODO = "DELETE_TODO";
 
-// Initial state
+
 const initialState = [];
 
-// Reducer
+
 const todoReducer = (state, action) => {
   switch (action.type) {
     case ADD_TODO:
@@ -29,10 +28,9 @@ const todoReducer = (state, action) => {
   }
 };
 
-// Create context
+
 const TodoContext = createContext();
 
-// Provider
 export const TodoProvider = ({ children }) => {
   const [todos, dispatch] = useReducer(todoReducer, initialState);
 
@@ -50,5 +48,5 @@ export const TodoProvider = ({ children }) => {
 
 
 
-// Custom hook
+
 export const useTodos = () => useContext(TodoContext);
