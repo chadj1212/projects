@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../css/Sidebar.css"; // import sidebar CSS
+import "../css/Sidebar.css"; 
 
 const Sidebar = () => {
   return (
@@ -18,8 +18,8 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeclassname="active">
-            Contact
+          <NavLink to="/Todo" activeclassname="active">
+            ToDo
           </NavLink>
         </li>
       </ul>

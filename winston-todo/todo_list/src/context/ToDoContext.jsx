@@ -3,6 +3,7 @@ import React, { createContext, useContext, useReducer } from "react";
 const ADD_TODO = "ADD_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const DELETE_TODO = "DELETE_TODO";
+const EDIT_TODO = "EDIT_TODO";
 
 
 const initialState = [];
@@ -20,7 +21,7 @@ const todoReducer = (state, action) => {
       return state.filter(todo => todo.id !== action.payload);
     default:
       return state;
-      case "EDIT_TODO":
+      case EDIT_TODO:
   return state.map(todo =>
     todo.id === action.payload.id ? { ...todo, text: action.payload.text } : todo
   );
@@ -37,7 +38,7 @@ export const TodoProvider = ({ children }) => {
   const addTodo = (text) => dispatch({ type: ADD_TODO, payload: text });
   const toggleTodo = (id) => dispatch({ type: TOGGLE_TODO, payload: id });
   const deleteTodo = (id) => dispatch({ type: DELETE_TODO, payload: id });
-  const editTodo = (id, text) => dispatch({ type: "EDIT_TODO", payload: { id, text } });
+  const editTodo = (id, text) => dispatch({ type: EDIT_TODO, payload: { id, text } });
 
   return (
     <TodoContext.Provider value={{ todos, addTodo, toggleTodo, deleteTodo, editTodo }}>

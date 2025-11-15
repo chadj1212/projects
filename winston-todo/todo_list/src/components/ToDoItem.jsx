@@ -10,7 +10,7 @@ const TodoItem = ({ todo }) => {
     if (editText.trim()) {
       editTodo(todo.id, editText);
       setIsEditing(false);
-    }
+    } 
   };
 
   return (
@@ -22,8 +22,8 @@ const TodoItem = ({ todo }) => {
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
           />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <button className="todo-btn todo-save" onClick={handleSave}>Save</button>
+          <button className="todo-btn todo-cancel" onClick={() => setIsEditing(false)}>Cancel</button>
         </>
       ) : (
         <>
@@ -34,8 +34,12 @@ const TodoItem = ({ todo }) => {
             {todo.text}
           </span>
           <div>
-            <button onClick={() => setIsEditing(true)}>Edit</button>
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button className="todo-btn todo-edit" onClick={() => setIsEditing(true)}>
+  Edit
+</button>
+<button className="todo-btn" onClick={() => deleteTodo(todo.id)}>
+  Delete
+</button>
           </div>
         </>
       )}

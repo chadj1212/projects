@@ -4,7 +4,7 @@ import { TodoProvider } from "./context/TodoContext";
 import Sidebar from "./components/SideBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Todo from "./pages/ToDo";
 import "./css/App.css";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/Todo" element={<Todo />} />
             </Routes>
           </div>
         </div>
