@@ -10,36 +10,48 @@ const TodoItem = ({ todo }) => {
     if (editText.trim()) {
       editTodo(todo.id, editText);
       setIsEditing(false);
-    } 
+    }
   };
 
   return (
-    <li>
+    <li className="todo-item">
       {isEditing ? (
         <>
           <input
             type="text"
+            className="todo-edit-input"
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
           />
-          <button className="todo-btn todo-save" onClick={handleSave}>Save</button>
-          <button className="todo-btn todo-cancel" onClick={() => setIsEditing(false)}>Cancel</button>
+          <button className="todo-btn todo-save" onClick={handleSave}>
+            Save
+          </button>
+          <button className="todo-btn todo-cancel" onClick={() => setIsEditing(false)}>
+            Cancel
+          </button>
         </>
       ) : (
         <>
-          <span
-            onClick={() => toggleTodo(todo.id)}
-            className={todo.completed ? "completed" : ""}
-          >
-            {todo.text}
-          </span>
-          <div>
+          <div className="todo-left">
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleTodo(todo.id)}
+              className="todo-checkbox"
+            />
+
+            <span className={todo.completed ? "completed" : ""}>
+              {todo.text}
+            </span>
+          </div>
+
+          <div className="todo-actions">
             <button className="todo-btn todo-edit" onClick={() => setIsEditing(true)}>
-  Edit
-</button>
-<button className="todo-btn" onClick={() => deleteTodo(todo.id)}>
-  Delete
-</button>
+              Edit
+            </button>
+            <button className="todo-btn" onClick={() => deleteTodo(todo.id)}>
+              Delete
+            </button>
           </div>
         </>
       )}
