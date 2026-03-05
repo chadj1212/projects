@@ -3,7 +3,9 @@ import './css/App.css';
 import MovieCard from "./components/MovieCard"
 import Home from './pages/home';
 import { Routes, Route } from 'react-router-dom';
+import { MovieProvider } from './contexts/MovieContext';
 import Favorites from './pages/Favorites';
+
 
 
 function App() {// component
@@ -11,7 +13,7 @@ function App() {// component
 
 
   return (
-    <div>
+    <MovieProvider>
     <NavBar />
      <main className='main-content'>
       <Routes>
@@ -22,7 +24,7 @@ function App() {// component
 
      </main>
     
-    </div>
+    </MovieProvider>
   )
 }
 
