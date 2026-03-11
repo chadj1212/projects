@@ -1,4 +1,7 @@
 import React from 'react'
+import SearchBar from './Components/SearchBar'
+import TemperatureToggle from './Components/TemperatureToggle';
+
 
 function App() {
   return(
@@ -29,7 +32,8 @@ function App() {
         </div>
 
         <div className='flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-6 mb-12'>
-
+          <SearchBar/>
+          <TemperatureToggle/>
         </div>
       </div>
     </div>
