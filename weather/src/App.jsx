@@ -4,6 +4,7 @@ import TemperatureToggle from './Components/TemperatureToggle';
 import LoadingSpinner from './Components/LoadingSpinner';
 import ErrorMessage from './Components/ErrorMessage';
 import WeatherCard from './Components/WeatherCard';
+import WeatherForcast from './Components/WeatherForcast';
 
 
 function App() {
@@ -58,15 +59,15 @@ function App() {
           <div className='xl:col-span-2'>
             <WeatherCard/>
           </div>
+          <div className='xl:col-span-1'>
+            {/* conditional rendering */}
+            <WeatherForcast/>
+
+          </div>
         </div>
-
-
       </div>
     </div>
-    </div>
-    
-    
-    
+    </div>    
   </div>
   );
 }
