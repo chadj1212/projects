@@ -1,6 +1,8 @@
 import React from 'react'
 import SearchBar from './Components/SearchBar'
 import TemperatureToggle from './Components/TemperatureToggle';
+import LoadingSpinner from './Components/LoadingSpinner';
+import ErrorMessage from './Components/ErrorMessage';
 
 
 function App() {
@@ -35,6 +37,22 @@ function App() {
           <SearchBar/>
           <TemperatureToggle/>
         </div>
+      </div>
+      {/* Main content */}
+      <div className='space-y-8'>
+        {/* Conditional rendering */}
+        <div className='flex justify-center'> 
+          <div className='bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20'>
+          <LoadingSpinner/>
+          <p className='text-white/80 text-center mt-4 font-meduim'>Fetching latest weather data............</p>
+
+          </div>
+        </div>
+        {/* conditional rendering */}
+        <div className='max-w-2xl mx-auto'>
+          <ErrorMessage/>
+        </div>
+
       </div>
     </div>
     </div>
