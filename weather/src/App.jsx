@@ -5,9 +5,12 @@ import LoadingSpinner from './Components/LoadingSpinner';
 import ErrorMessage from './Components/ErrorMessage';
 import WeatherCard from './Components/WeatherCard';
 import WeatherForcast from './Components/WeatherForcast';
+import { useWeather } from './hooks/useWeather';
 
 
 function App() {
+
+  const { currentWeather, forcast, loading, error, unit, fetchWeatherByCity, fetchWeatherByLocation, toggleUnit } = useWeather();
   return(
    <div className='min-h-screen relative overflow-hidden'>
     {/* back ground image with overlay */}
@@ -36,35 +39,41 @@ function App() {
         </div>
 
         <div className='flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-6 mb-12'>
-          {/* <SearchBar/> */}
+          <SearchBar/>
           <TemperatureToggle/>
         </div>
       </div>
       {/* Main content */}
       <div className='space-y-8'>
         {/* Conditional rendering */}
-        {/* <div className='flex justify-center'> 
+        {loading && (
+          <div className='flex justify-center'> 
           <div className='bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20'>
           <LoadingSpinner/>
           <p className='text-white/80 text-center mt-4 font-meduim'>Fetching latest weather data............</p>
 
           </div>
-        </div> */}
+        </div>
+      )}
         {/* conditional rendering */}
-        {/* <div className='max-w-2xl mx-auto'>
+        {error && !loading && (
+          <div className='max-w-2xl mx-auto'>
           <ErrorMessage/>
-        </div> */}
+        </div>
+      )}
         {/* conditional rendering */}
-        <div className='grid grid-cols-1 xl:grid-cols-3 gap-8'>
+        { currentWeather && !loading && (
+          <div className='grid grid-cols-1 xl:grid-cols-3 gap-8'>
           <div className='xl:col-span-2'>
             <WeatherCard/>
           </div>
           <div className='xl:col-span-1'>
             {/* conditional rendering */}
-            <WeatherForcast/>
+            {forcast && <WeatherForcast/>}
 
           </div>
         </div>
+      )}
       </div>
     </div>
     </div>    
