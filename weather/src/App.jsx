@@ -27,7 +27,7 @@ function App() {
       <div className='text-center mb-12'>
         <div className='mb-8'>
           <h1 className='text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-2xl tracking-tight'>
-            Weather{" "}
+            Weather
              <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
               Pro
               </span>
@@ -39,14 +39,14 @@ function App() {
         </div>
 
         <div className='flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-6 mb-12'>
-          <SearchBar/>
+          <SearchBar onSearch={fetchWeatherByCity} onLocationSearch={fetchWeatherByLocation} loading={loading}/>
           <TemperatureToggle/>
         </div>
       </div>
       {/* Main content */}
       <div className='space-y-8'>
         {/* Conditional rendering */}
-        {loading && (
+        {/* {loading && (
           <div className='flex justify-center'> 
           <div className='bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20'>
           <LoadingSpinner/>
@@ -54,11 +54,11 @@ function App() {
 
           </div>
         </div>
-      )}
+      )} */}
         {/* conditional rendering */}
         {error && !loading && (
           <div className='max-w-2xl mx-auto'>
-          <ErrorMessage/>
+          {/* <ErrorMessage/> */}
         </div>
       )}
         {/* conditional rendering */}
