@@ -1,5 +1,5 @@
 const API_KEY= 'bc2f3b39f6fd3171e9547a5e181f6f7a';
-const BASE_URL='https://api.openweathermap.org/data/3.0'
+const BASE_URL='https://api.openweathermap.org/data/2.5'
 const GEO_URL='https://api.openweathermap.org/geo/1.0'
 
 export const getCurrentweather = async (city)=>{
@@ -100,10 +100,10 @@ export const searchCities = async (query )=>{
         if(!response.ok){
             if(response.status=== 401){
                 throw new Error(`invalid API KEY, please check your OpenWeatherMap API configuration`);
-            }
-            
-        }else{
+            }else{                
             throw new Error("weather service is temporarily unavailable. Please try again later ");
+        }
+            
         }
 
         
