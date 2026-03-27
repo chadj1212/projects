@@ -77,9 +77,9 @@ function SearchBar({onSearch, onLocationSearch, loading}) {
         <form className='relative z-10' onSubmit={handleSubmit}>
             <div className='relative group'>
                 <Search className='absolute left-4 top1/2 transform -translate-y text-gray/60 w-5 h-5 group-focus-within:text-white transition-all '/>
-                <input
+                <input 
                  type= 'text' 
-                 query={query}
+                 value={query}
                  onChange={(e) => setQuery(e.target.value)} 
                  placeholder='Search for any city worldwide....... '
                 className='w-full pl-12 pr-24 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl text-white placeholder-white 50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all duration-300 hover:bg-white/15' />
@@ -111,12 +111,14 @@ function SearchBar({onSearch, onLocationSearch, loading}) {
       suggestion.map((city, index)=>{
         return (
           <button className='w-full px-6 py-4 text-left hover:bg-white/10 transition-all duration-200 flex items-center justify-between group border-b border-white/10 last:border-b-0' key={`${city.name}-${city.country}-${index}`} onClick={()=> handleSuggestionsClick(city)}>
-        <div className='font-medium text-white group-hover:text-white/90'>
-          {city.name}
-        {/* Conditional rendering */}
-        {city.state && <span>,{city.state}</span>}
+        <div>
+              <div className='font-medium text-white group-hover:text-white/90'>
+              {city.name}
+            
+            {city.state && <span className='text-white/70'>,{city.state}</span>}
+            </div>
+            <div className='text-sm text-white/60'>{city.country}</div>
         </div>
-        <div className='text-sm text-white/60'>{city.country}</div>
         <Search className='w-4 h-4 text-white/40 group-hover:text-white/60 transition-all'/>
 
         </button>

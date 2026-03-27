@@ -6,7 +6,7 @@ import {
 
     export const useWeather = ()=>{
         const[currentWeather, setCurrentWeather] = useState(null);
-        const[forcast, setForCast] = useState(null);
+        const[forecast, setForeCast] = useState(null);
         const[loading, setLoading] = useState(false);
         const[error, setError] = useState(null);
         const[unit, setUnit] = useState("C");
@@ -21,7 +21,7 @@ import {
                 ])
 
                 setCurrentWeather(weatherData);
-                setForcast(foreCast)
+                setForeCast(foreCast)
             }catch(err){
                 setError(err instanceof Error ? err.message : "failed to fetch weather data")
             }
@@ -44,8 +44,8 @@ import {
                 setCurrentWeather(weatherData);
 
                 //also fetch forecast for the current location
-                const forcastData = await getWeatherForecast(weatherData.name);
-                setForCast(forcastData)
+                const forecastData = await getWeatherForecast(weatherData.name);
+                setForeCast(forecastData)
             }catch(err){
                 setError(
                     err instanceof Error ? err.message : "failed to fetch weather data"
@@ -67,8 +67,8 @@ import {
     //load default weather on mount
     useEffect(()=>{
         fetchWeatherByCity("New York");
-    });
-    return { currentWeather, forcast, loading, error, unit, fetchWeatherByCity, fetchWeatherByLocation, toggleUnit, }
+    }, []);
+    return { currentWeather, forecast, loading, error, unit, fetchWeatherByCity, fetchWeatherByLocation, toggleUnit, }
 };
 
 

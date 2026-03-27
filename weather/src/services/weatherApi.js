@@ -13,8 +13,9 @@ export const getCurrentweather = async (city)=>{
             }else if (response.status=== 401){
                 throw new Error(`city ${city} invalid API KEY, please check your OpenWeatherMap API configuration`);
             }
-        }else{
+            else{
             throw new Error("weather service is temporarily unavailable. Please try again later ");
+        }
         }
 
         const data = await response.json();
@@ -41,10 +42,11 @@ export const getCurrentweatherByCoords = async (lat, lon )=>{
         if(!response.ok){
             if(response.status=== 401){
                 throw new Error(`invalid API KEY, please check your OpenWeatherMap API configuration`);
-            }
             
-        }else{
+            }else{
             throw new Error("weather service is temporarily unavailable. Please try again later ");
+        }
+            
         }
 
         const data = await response.json();
@@ -73,17 +75,15 @@ export const getWeatherForecast = async (city )=>{
                 throw new Error(`city ${city} not found, please check the spelling and try again  `);
             }else if (response.status=== 401){
                 throw new Error(`city ${city} invalid API KEY, please check your OpenWeatherMap API configuration`);
-            }
-        }else{
+
+            }else{
             throw new Error("weather service is temporarily unavailable. Please try again later ");
         }
+    }
 
 
-        return await response.json();
-        
-
-       
-    }catch(error){
+        return await response.json();      
+        }catch(error){
         if(error instanceof TypeError && error.message.includes("fetch")){
             throw new Error("Network error, please check your internet connection and try again");
         }
