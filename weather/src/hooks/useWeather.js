@@ -66,7 +66,7 @@ import {
     }
     //load default weather on mount
     useEffect(()=>{
-        fetchWeatherByCity("New York");
+        fetchWeatherByCity("Netherlands");
     }, []);
     return { currentWeather, forecast, loading, error, unit, fetchWeatherByCity, fetchWeatherByLocation, toggleUnit, }
 };
